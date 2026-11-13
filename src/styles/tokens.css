@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Gromaxx design tokens: "Midnight & Champagne"
+   Single source for colors, type, glass and motion. The WebGL background
+   reads the --shader-* values, so changing them here re-themes it too.
+   ========================================================================== */
+:root {
+  /* ---- Midnight base ---- */
+  --color-bg: #070b18;
+  --color-bg-raised: #0c1430;
+
+  /* ---- Ink (text on dark) ---- */
+  --color-ink: #f4efe6;
+  --color-ink-soft: #b4b2b3;
+  --color-ink-muted: #7c7f8f;
+  --color-danger: #f0a08a;
+
+  /* ---- Champagne gold ---- */
+  --color-champagne-100: #fbf3e2;
+  --color-champagne-200: #f4e2bb;
+  --color-champagne-300: #e8cf9c;
+  --color-gold-400: #d4b072;
+  --color-gold-500: #b8904f;
+  --color-gold-600: #94703a;
+  --color-gold-700: #6e5229;
+
+  /* ---- Metallic gradients (first stop = last stop, so shimmer loops seamlessly) ---- */
+  --gradient-metal: linear-gradient(
+    100deg,
+    #b8904f 0%,
+    #f4e2bb 22%,
+    #c9a25f 42%,
+    #fff3d6 58%,
+    #c49a57 78%,
+    #b8904f 100%
+  );
+  --gradient-button: linear-gradient(180deg, #f6e7c4 0%, #ddbd7f 55%, #c59e5b 100%);
+  --color-on-gold: #0b1124;
+
+  /* ---- Glass (no box-shadow anywhere: depth = blur + hairlines) ---- */
+  --glass-bg: rgba(255, 255, 255, 0.045);
+  --glass-bg-strong: rgba(255, 255, 255, 0.075);
+  --glass-border: rgba(255, 255, 255, 0.11);
+  --glass-highlight: rgba(255, 255, 255, 0.22);
+  --glass-border-focus: rgba(232, 207, 156, 0.55);
+  --glass-blur: 22px;
+
+  /* ---- Background shader colors ---- */
+  --shader-bg-top: #0d1532;
+  --shader-bg-bottom: #04060d;
+  --shader-glow-cool: #22306a;
+  --shader-glow-warm: #6e5229;
+  --shader-gold-deep: #8a6431;
+  --shader-gold-light: #f6e3b6;
+
+  /* ---- Typography ---- */
+  --font-display: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Manrope Variable', 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-display: clamp(2.4rem, 0.9rem + 5.2vw, 5.5rem);
+  --fw-display: 600;
+  --tracking-display: -0.04em;
+  --fs-lede: clamp(1rem, 0.9rem + 0.45vw, 1.25rem);
+  --fs-wordmark: 1.25rem;
+  --fs-body: 0.9375rem;
+  --fs-small: 0.8125rem;
+  --fs-micro: 0.6875rem;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --tracking-caps: 0.24em;
+
+  /* ---- Layout ---- */
+  --radius-pill: 999px;
+  --space-page-x: clamp(1rem, 4vw, 3.5rem);
+  --space-page-y: clamp(1.25rem, 3vw, 2.25rem);
+  --form-width: 29rem;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 200ms;
+  --dur-base: 450ms;
+  --dur-slow: 900ms;
+}
